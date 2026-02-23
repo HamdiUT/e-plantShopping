@@ -3,7 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .landing-page {
@@ -30,21 +35,21 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
+  top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
   gap: 20px;
+  padding: 20px;
 }
 
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
+  margin-top: 0;
+  margin-left: 0;
   z-index: 1;
   text-align: center;
   /* background-color: red; */
-  width: 400px;
-  height: 400px;
+  width: min(90vw, 420px);
+  min-height: 320px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -58,12 +63,12 @@
 }
 
 .content h1 {
-  font-size: 48px;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 25px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .divider {
@@ -74,8 +79,8 @@
 }
 
 .get-started-button {
-  padding: 15px 25px;
-  font-size: 23px;
+  padding: 12px 20px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   background-color: #4caf50;
@@ -87,6 +92,10 @@
 
 .get-started-button:hover {
   background-color: #45a049;
+}
+
+.aboutus_container {
+  width: min(90vw, 700px);
 }
 
 /* ProductList.css */
